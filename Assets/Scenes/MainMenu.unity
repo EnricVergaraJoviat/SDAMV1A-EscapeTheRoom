@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  nextRoom: lvl1
+  nextRoom: ExampleLevel
 --- !u!4 &1471233061
 Transform:
   m_ObjectHideFlags: 0
