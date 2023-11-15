@@ -9,7 +9,7 @@ public class RoomManager : MonoBehaviour
     public RoomInfo[] rooms;
     public string nextRoom;
     private static RoomManager instance;
-
+    private bool startGame = false;
 
     void Awake()
     {
@@ -34,19 +34,18 @@ public class RoomManager : MonoBehaviour
     void Update()
     {
         
-        if (timer >= 0)
+        if (startGame)
         {
             timer += Time.deltaTime;
             // Format the timer to x.xx seconds
             float formattedTime = Mathf.Floor(timer) + Mathf.Floor((timer % 1) * 100) / 100;
-            Debug.Log("Time elapsed: " + formattedTime.ToString("F2"));
+
         }
     }
 
     public void onClick()
     {
-        timer = 0f;
-
+        startGame = true;
         SceneManager.LoadScene(nextRoom);
     }
 }

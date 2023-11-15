@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 1471233061}
   - component: {fileID: 1471233060}
   m_Layer: 0
-  m_Name: roomManager
+  m_Name: RoomManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa065c392cb56b4297fed46ecec00e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rooms: []
+  timer: 0
   nextRoom: lvl1
 --- !u!4 &1471233061
 Transform:
