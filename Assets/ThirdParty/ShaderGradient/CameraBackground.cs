@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class CameraBackground : MonoBehaviour
 {
-    public Camera mainCamera; // Referencia a la cámara principal
+    private Camera mainCamera; // Referencia a la cámara principal
+
+    private void Start()
+    {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
 
     void Update()
     {
