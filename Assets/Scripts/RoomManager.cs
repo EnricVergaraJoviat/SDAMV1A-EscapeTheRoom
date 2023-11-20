@@ -1,51 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class RoomManager : MonoBehaviour
 {
-    public float timer;
-    public RoomInfo[] rooms;
+    public TextMeshProUGUI labelTotalTime;
+    public TMP_InputField inputF_Solution;
+    public int solutionCode;
     public string nextRoom;
-    private static RoomManager instance;
-    private bool startGame = false;
+    public GameObject[] lights;
+    public float timeToShowLights = 100;
 
-    void Awake()
+    private float timer;
+    
+    // Start is called before the first frame update
+    void Start()
     {
-        if (instance == null)
+        timer = 0.0f;
+        foreach (var light in lights)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject); 
+            light.SetActive(false);
+        }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer > timeToShowLights)
+        {
+            foreach (var light in lights)
+            {
+                light.SetActive(true);
+            }
+        }
+
+        labelTotalTime.text = "Temps total: "+ timer;
+    }
+
+    public void CheckSolution()
+    {
+        if (inputF_Solution.text == this.solutionCode.ToString())
+        {
+            Debug.Log("The CODE is Correct!");
+            SceneManager.LoadScene(nextRoom);
         }
         else
         {
-            Destroy(gameObject);
+            Debug.Log("The CODE is Wrong!");
         }
-    }
-
-
-    void Start()
-    {
-        timer = 0f;
-    }
-
-   
-    void Update()
-    {
-        
-        if (startGame)
-        {
-            timer += Time.deltaTime;
-            // Format the timer to x.xx seconds
-            float formattedTime = Mathf.Floor(timer) + Mathf.Floor((timer % 1) * 100) / 100;
-
-        }
-    }
-
-    public void onClick()
-    {
-        startGame = true;
-        SceneManager.LoadScene(nextRoom);
     }
 }
