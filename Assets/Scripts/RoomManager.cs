@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Michsky.MUIP;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,18 +9,50 @@ using UnityEngine.UI;
 
 public class RoomManager : MonoBehaviour
 {
+    //----Links to UI----
+    public TextMeshProUGUI labelTimeInCurrentRoom;
     public TextMeshProUGUI labelTotalTime;
     public TMP_InputField inputF_Solution;
+    public GameObject panelRoomSolved;
+    public GameObject panelInfo;
+        
+    //---Setup custom room:
     public int solutionCode;
     public string nextRoom;
     public GameObject[] lights;
     public float timeToShowLights = 100;
 
+    //---Private variables:
+    private int tries;
     private float timer;
+    private float totalTime;
+    private GameController gc = null;
+    private bool roomSolved;
     
-    // Start is called before the first frame update
     void Start()
     {
+        tries = 0;
+        panelRoomSolved.SetActive(false);
+        panelInfo.SetActive(true);
+        roomSolved = false;
+        GameObject o = GameObject.FindGameObjectWithTag("GameController");
+        if (o != null)
+        {
+            gc = o.GetComponent<GameController>();
+            if (gc != null)
+            {
+                totalTime = gc.GetTotalTime();
+            }
+            else
+            {
+                Debug.LogWarning("GameController object wihtout script GameController");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("There's no GameController");
+            totalTime = 0.0f;
+        }
         timer = 0.0f;
         foreach (var light in lights)
         {
@@ -29,7 +62,14 @@ public class RoomManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (roomSolved)
+        {
+            
+            return;
+        }
+        
         timer += Time.deltaTime;
+        totalTime += Time.deltaTime;
         if (timer > timeToShowLights)
         {
             foreach (var light in lights)
@@ -38,7 +78,19 @@ public class RoomManager : MonoBehaviour
             }
         }
 
-        labelTotalTime.text = "Temps total: "+ timer;
+        int minutes = (int)timer / 60;
+        int seconds = (int)timer % 60;
+
+        string timeText = string.Format("{0:00}:{1:00}", minutes, seconds);
+        labelTimeInCurrentRoom.text = "Temps a la room actual: "+ timeText;
+        
+        minutes = (int)totalTime / 60;
+        seconds = (int)totalTime % 60;
+
+        timeText = string.Format("{0:00}:{1:00}", minutes, seconds);
+        labelTotalTime.text = "Temps total: "+ timeText;
+        
+        
     }
 
     public void CheckSolution()
@@ -46,11 +98,24 @@ public class RoomManager : MonoBehaviour
         if (inputF_Solution.text == this.solutionCode.ToString())
         {
             Debug.Log("The CODE is Correct!");
-            SceneManager.LoadScene(nextRoom);
+            panelRoomSolved.SetActive(true);
+            panelInfo.SetActive(false);
+            roomSolved = true;
+            panelRoomSolved.SetActive(true);
+            if (gc != null)
+            {
+                gc.FinishRoom(timer, tries);
+            }
         }
         else
         {
+            tries++;
             Debug.Log("The CODE is Wrong!");
         }
+    }
+
+    public void GoNextRoom()
+    {
+        SceneManager.LoadScene(nextRoom);
     }
 }

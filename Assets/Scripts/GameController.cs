@@ -6,12 +6,9 @@ using System.Collections.Generic;
 
 public class GameController : MonoBehaviour
 {
-    public float timer;
-    public float totalTime;
     List<RoomInfo> rooms = new List<RoomInfo>();
     public string firstRoom;
     private static GameController instance;
-    private bool startGame = false;
 
     void Awake()
     {
@@ -28,29 +25,28 @@ public class GameController : MonoBehaviour
    
     void Update()
     {
-        if (startGame)
-        {
-            timer += Time.deltaTime;
-            totalTime += Time.deltaTime;
-            float formattedTime = Mathf.Floor(timer) + Mathf.Floor((timer % 1) * 100) / 100;
-        }
+        
     }
 
     public void StartGame()
     {
-        totalTime = timer = 0.0f;
         rooms.Clear();
-        startGame = true;
-    }
-    public void StartRoom()
-    {
-        timer = 0.0f;
         SceneManager.LoadScene(firstRoom);
     }
-
-    public void FinishRoom()
+    
+    public void FinishRoom(float timeCurrentRoom, int tries)
     {
-        RoomInfo roomInfo = new RoomInfo(timer, 0);
+        RoomInfo roomInfo = new RoomInfo(timeCurrentRoom, tries);
         rooms.Add(roomInfo);
+    }
+
+    public float GetTotalTime()
+    {
+        float totalTime = 0.0f;
+        foreach (var roomInfo in rooms)
+        {
+            totalTime += roomInfo.time;
+        }
+        return totalTime;
     }
 }
