@@ -3954,7 +3954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: nextRoom
-      value: /Grup_5 (Biel - Eric)/Grup_5.unity
+      value: ../Grup_5 (Biel - Eric)/Grup_5.unity
       objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: solutionCode
@@ -5987,7 +5987,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4747081004864901704, guid: ba55787fdb425b44ab29298578bcd4ee, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5772635
+      value: 0.6139774
       objectReference: {fileID: 0}
     - target: {fileID: 4747081004864901704, guid: ba55787fdb425b44ab29298578bcd4ee, type: 3}
       propertyPath: m_LocalScale.y
@@ -5999,7 +5999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747081004864901704, guid: ba55787fdb425b44ab29298578bcd4ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.956
+      value: -0.852
       objectReference: {fileID: 0}
     - target: {fileID: 4747081004864901704, guid: ba55787fdb425b44ab29298578bcd4ee, type: 3}
       propertyPath: m_LocalPosition.y
