@@ -2816,6 +2816,10 @@ PrefabInstance:
       value: RoomManager
       objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
+      propertyPath: solutionCode
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.size
       value: 0
       objectReference: {fileID: 0}
