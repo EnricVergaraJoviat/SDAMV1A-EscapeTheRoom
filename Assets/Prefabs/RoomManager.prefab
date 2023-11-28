@@ -697,7 +697,7 @@ MonoBehaviour:
   inputF_Solution: {fileID: 525779288130292499}
   panelRoomSolved: {fileID: 6748293759555613723}
   panelInfo: {fileID: 8686404227316312935}
-  solutionCode: 234
+  solutionCode: 0
   nextRoom: Group_1
   lights: []
   timeToShowLights: 100
