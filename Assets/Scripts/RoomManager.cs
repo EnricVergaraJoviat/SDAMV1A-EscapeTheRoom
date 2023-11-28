@@ -14,8 +14,8 @@ public class RoomManager : MonoBehaviour
     public TextMeshProUGUI labelTotalTime;
     public TMP_InputField inputF_Solution;
     public GameObject panelRoomSolved;
-    public GameObject panelInfo;
-        
+    public GameObject[] panelToHideWithVictory;
+    
     //---Setup custom room:
     public int solutionCode;
     public string nextRoom;
@@ -33,7 +33,6 @@ public class RoomManager : MonoBehaviour
     {
         tries = 0;
         panelRoomSolved.SetActive(false);
-        panelInfo.SetActive(true);
         roomSolved = false;
         GameObject o = GameObject.FindGameObjectWithTag("GameController");
         if (o != null)
@@ -82,13 +81,13 @@ public class RoomManager : MonoBehaviour
         int seconds = (int)timer % 60;
 
         string timeText = string.Format("{0:00}:{1:00}", minutes, seconds);
-        labelTimeInCurrentRoom.text = "Temps a la room actual: "+ timeText;
+        labelTimeInCurrentRoom.text = timeText;
         
         minutes = (int)totalTime / 60;
         seconds = (int)totalTime % 60;
 
         timeText = string.Format("{0:00}:{1:00}", minutes, seconds);
-        labelTotalTime.text = "Temps total: "+ timeText;
+        labelTotalTime.text = timeText;
         
         
     }
@@ -97,9 +96,12 @@ public class RoomManager : MonoBehaviour
     {
         if (inputF_Solution.text == this.solutionCode.ToString())
         {
+            foreach (var o in panelToHideWithVictory)
+            {
+                o.SetActive(false);
+            }
             Debug.Log("The CODE is Correct!");
             panelRoomSolved.SetActive(true);
-            panelInfo.SetActive(false);
             roomSolved = true;
             panelRoomSolved.SetActive(true);
             if (gc != null)
