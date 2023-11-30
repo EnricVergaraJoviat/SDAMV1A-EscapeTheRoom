@@ -10,6 +10,8 @@ using UnityEngine.UI;
 public class RoomManager : MonoBehaviour
 {
     //----Links to UI----
+    [Header("________________________")]
+    [Header("NO TOCAR RES D'AIXÒ")]
     public TextMeshProUGUI labelTimeInCurrentRoom;
     public TextMeshProUGUI labelTotalTime;
     public TMP_InputField inputF_Solution;
@@ -20,13 +22,31 @@ public class RoomManager : MonoBehaviour
     public AudioClip audio_code_wrong;
     public AudioClip audio_next;
     public AudioSource audioSource;
+    public AudioClip singleKeyType;
+    public GameObject door;
+    public ProgressBar pb;
+    public Transform cameraTransform;
+    public GameObject particleConfetti1;
+    public GameObject particleConfetti2;
+    public TextMeshProUGUI labelAuthor1;
+    public TextMeshProUGUI labelAuthor2;
+    public TextMeshProUGUI labelTitle;
+    public TextMeshProUGUI labelSubtitle;
+    public TextMeshProUGUI labelLogo;
     
     //---Setup custom room:
+    [Header("________________________")]
+    [Header("CONFIGURAR AIXÒ")]
+    
     public int solutionCode;
     public string nextRoom;
     public GameObject[] lights;
     public float timeToShowLights = 100;
-
+    public string author1;
+    public string author2;
+    public string title;
+    public string subtitle;
+    
     //---Private variables:
     private int tries;
     private float timer;
@@ -36,6 +56,11 @@ public class RoomManager : MonoBehaviour
     
     void Start()
     {
+        labelAuthor1.text = author1;
+        labelAuthor2.text = author2;
+        labelTitle.text = title;
+        labelSubtitle.text = subtitle;
+        labelLogo.text = "Escape Room\n" + title;
         tries = 0;
         panelRoomSolved.SetActive(false);
         roomSolved = false;
@@ -107,7 +132,9 @@ public class RoomManager : MonoBehaviour
                 o.SetActive(false);
             }
             Debug.Log("The CODE is Correct!");
-            
+            StartCoroutine(RotateDoor(100, 4.0f));
+            StartCoroutine(AnimateProgressBar(0.0f, 25.0f, 4.0f));
+            StartCoroutine(ShowConfetti());
             int randomIndex = Random.Range(0, audio_code_correct.Length);
             AudioClip randomClip = audio_code_correct[randomIndex];
             audioSource.clip = randomClip;
@@ -132,8 +159,63 @@ public class RoomManager : MonoBehaviour
         }
     }
 
+    private IEnumerator ShowConfetti()
+    {
+        for (int i = 0; i < 3; i++) // Llamará la función 3 veces
+        {
+            GameObject.Instantiate(particleConfetti1, cameraTransform.position + cameraTransform.forward*1 +cameraTransform.right*1, Quaternion.identity);
+            GameObject.Instantiate(particleConfetti2, cameraTransform.position + cameraTransform.forward*1 +cameraTransform.right*1, Quaternion.identity);
+    
+            GameObject.Instantiate(particleConfetti1, cameraTransform.position + cameraTransform.forward*1 -cameraTransform.right*1, cameraTransform.rotation);
+            GameObject.Instantiate(particleConfetti2, cameraTransform.position + cameraTransform.forward*1 -cameraTransform.right*1, cameraTransform.rotation);
+
+            yield return new WaitForSeconds(1f); // Espera 1/3 de segundo entre cada llamada
+        }
+        
+    }
+
+    
     public void GoNextRoom()
     {
         SceneManager.LoadScene(nextRoom);
+    }
+    
+    
+    // Coroutina para rotar la puerta
+    IEnumerator RotateDoor(float angle, float duration)
+    {
+        Quaternion initialRotation = door.transform.rotation;
+        Quaternion finalRotation = door.transform.rotation * Quaternion.Euler(0, angle, 0);
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            door.transform.rotation = Quaternion.Slerp(initialRotation, finalRotation, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        door.transform.rotation = finalRotation; // Asegura que la rotación termine exactamente en el ángulo final
+    }
+    
+    IEnumerator AnimateProgressBar(float startValue, float endValue, float duration)
+    {
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float currentPercent = Mathf.Lerp(startValue, endValue, elapsed / duration);
+            pb.currentPercent = currentPercent;
+            Debug.Log(currentPercent);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        pb.currentPercent = endValue; // Asegura que el valor final sea exactamente endValue
+    }
+
+    public void OnChangedInputFiled()
+    {
+        audioSource.PlayOneShot(singleKeyType);
     }
 }
