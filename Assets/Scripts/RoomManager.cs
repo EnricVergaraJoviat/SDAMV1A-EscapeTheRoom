@@ -11,7 +11,7 @@ public class RoomManager : MonoBehaviour
 {
     //----Links to UI----
     [Header("________________________")]
-    [Header("NO TOCAR RES D'AIXÒ")]
+    [Header("NO TOCAR RES D'AIXÒ:")]
     public TextMeshProUGUI labelTimeInCurrentRoom;
     public TextMeshProUGUI labelTotalTime;
     public TMP_InputField inputF_Solution;
@@ -23,9 +23,7 @@ public class RoomManager : MonoBehaviour
     public AudioClip audio_next;
     public AudioSource audioSource;
     public AudioClip singleKeyType;
-    public GameObject door;
     public ProgressBar pb;
-    public Transform cameraTransform;
     public GameObject particleConfetti1;
     public GameObject particleConfetti2;
     public TextMeshProUGUI labelAuthor1;
@@ -36,8 +34,9 @@ public class RoomManager : MonoBehaviour
     
     //---Setup custom room:
     [Header("________________________")]
-    [Header("CONFIGURAR AIXÒ")]
-    
+    [Header("CONFIGURAR AIXÒ:")]
+    public Transform cameraTransform;
+    public GameObject door;
     public int solutionCode;
     public string nextRoom;
     public GameObject[] lights;
