@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa065c392cb56b4297fed46ecec00e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstRoom: Template Level
+  firstRoom: Grup 2(galeria)
 --- !u!4 &1471233061
 Transform:
   m_ObjectHideFlags: 0
