@@ -2602,7 +2602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4314349710838481544, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_Name
-      value: RoomManager
+      value: Control de Escena
       objectReference: {fileID: 0}
     - target: {fileID: 5585548795656252512, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4551,7 +4551,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d951c49265d0b454e864e7c5fcfe53ac, type: 2}
     - target: {fileID: 923546542211654526, guid: 9f04bfc8b1af5465cad27faf2d40a9ed, type: 3}
       propertyPath: m_Name
-      value: Room
+      value: Escena
       objectReference: {fileID: 0}
     - target: {fileID: 989893402439956887, guid: 9f04bfc8b1af5465cad27faf2d40a9ed, type: 3}
       propertyPath: m_LocalPosition.x
