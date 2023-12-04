@@ -32,7 +32,7 @@ Material:
     - _ChromaticAberration: 0.1
     - _Depth: 1.9
     - _Depth1: 2
-    - _DepthRange: 0.65
+    - _DepthRange: 0.885
     - _DepthRange2: 0.761
     - _Dist: 0.04
     - _Float0: 20.58
@@ -50,7 +50,7 @@ Material:
     m_Colors:
     - _Color0: {r: 0.15294108, g: 0.49964565, b: 0.5294118, a: 0}
     - _Color1: {r: 1, g: 1, b: 1, a: 0}
-    - _ColorDepth: {r: 0.047058746, g: 0.12602228, b: 0.16078421, a: 0.6117647}
-    - _ColorFoam: {r: 1, g: 0.99311846, b: 0.86, a: 0.58431375}
+    - _ColorDepth: {r: 0.047058746, g: 0.12602228, b: 0.16078421, a: 1}
+    - _ColorFoam: {r: 1, g: 0.99311846, b: 0.86, a: 1}
     - _Colorwater: {r: 0.48406905, g: 0.8616056, b: 0.9245283, a: 0}
   m_BuildTextureStacks: []
