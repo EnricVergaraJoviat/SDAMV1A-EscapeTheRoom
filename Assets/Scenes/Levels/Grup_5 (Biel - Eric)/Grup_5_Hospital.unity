@@ -348,67 +348,6 @@ MonoBehaviour:
   invertYValue: 1
   invertZoomValue: 1
   autoRotateReverseValue: 1
---- !u!1001 &287570578
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7519354683229985218, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: e945b2e1a794bec4692dc41a03f8bafb, type: 2}
-    - target: {fileID: 8312203791495100439, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_Name
-      value: scifi-medical-charger
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.9713106
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.4657768
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.9899287
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651751207733830317, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 76a94036ceb5ff14cb7451b8ecfcc7cc, type: 3}
 --- !u!1001 &333042921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1001,7 +940,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 346775415328125921, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
@@ -1562,7 +1502,6 @@ SceneRoots:
   - {fileID: 1766268288}
   - {fileID: 1141910152}
   - {fileID: 1783183297}
-  - {fileID: 287570578}
   - {fileID: 572390961}
   - {fileID: 1209749499}
   - {fileID: 1526981690}
