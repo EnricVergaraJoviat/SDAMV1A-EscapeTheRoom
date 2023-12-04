@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Group_1 (Student1-Student2)/Group_1.unity
     guid: ccd2561af0fae4476b5dab817b1fb50d
   - enabled: 1
-    path: "Assets/Scenes/Levels/Grup_2 (Daniel Pe\u0301rez - Daniel Oller)/Grup 2(galeria).unity"
+    path: "Assets/Scenes/Levels/Grup_2 (Daniel P\xE9rez - Daniel Oller)/Grup 2(galeria).unity"
     guid: 9d17bd3e472f782488ed91ebfb8fdca3
   m_configObjects: {}
