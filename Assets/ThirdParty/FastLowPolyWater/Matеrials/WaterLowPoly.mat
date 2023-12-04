@@ -43,7 +43,7 @@ Material:
     - _OpasityIntensity: 1
     - _Refraction: 0
     - _ScaleNoise: 0.1
-    - _SizeFoam: 0.07
+    - _SizeFoam: 0.06
     - _Specular: 0.365
     - _Speed: 0.2
     - __dirty: 0
