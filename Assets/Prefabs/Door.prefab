@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2184675173256175144}
+  - component: {fileID: 8237455530842245760}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -33,6 +34,20 @@ Transform:
   - {fileID: 5963272214278081092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0.309, z: 0}
+--- !u!114 &8237455530842245760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7941005756377833993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee98f48ce3c95174198c4696f6c547f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorObject: {fileID: 3853902841886861084}
+  UI: {fileID: 0}
 --- !u!1001 &3854841567966158350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109,6 +124,11 @@ PrefabInstance:
 --- !u!4 &3850030969109603700 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4832627744815994, guid: a89fb4c5717e04af7b826dd5fa720ae3, type: 3}
+  m_PrefabInstance: {fileID: 3854841567966158350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3853902841886861084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1396157326604562, guid: a89fb4c5717e04af7b826dd5fa720ae3, type: 3}
   m_PrefabInstance: {fileID: 3854841567966158350}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5967523786500550974
