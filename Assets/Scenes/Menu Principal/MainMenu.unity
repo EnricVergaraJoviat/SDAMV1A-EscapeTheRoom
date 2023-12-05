@@ -5401,8 +5401,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19809310, guid: 086a1239481a0094787220fd4eda8c2d, type: 3}
+      propertyPath: CollisionModule.voxelSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809310, guid: 086a1239481a0094787220fd4eda8c2d, type: 3}
       propertyPath: SizeBySpeedModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809310, guid: 086a1239481a0094787220fd4eda8c2d, type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809310, guid: 086a1239481a0094787220fd4eda8c2d, type: 3}
+      propertyPath: CollisionModule.maxKillSpeed
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 19809310, guid: 086a1239481a0094787220fd4eda8c2d, type: 3}
       propertyPath: ShapeModule.randomDirectionAmount
