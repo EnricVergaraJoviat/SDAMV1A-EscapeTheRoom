@@ -3518,13 +3518,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613545123}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3914267, y: 0.33595547, z: -0.15611465, w: 0.8423463}
-  m_LocalPosition: {x: -1.0946655, y: 2.7180374, z: -2.9881973}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2.06, y: 4.25, z: 1.46}
   m_LocalScale: {x: 1e-11, y: 1e-11, z: 1e-11}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1689783430}
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &613545125
 Light:
   m_ObjectHideFlags: 0
@@ -3537,9 +3537,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.5
-  m_Range: 22.66
-  m_SpotAngle: 118
+  m_Intensity: 4.59
+  m_Range: 15.06
+  m_SpotAngle: 89
   m_InnerSpotAngle: 6
   m_CookieSize: 10
   m_Shadows:
@@ -3579,7 +3579,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0.88
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -6465,16 +6465,16 @@ PrefabInstance:
       objectReference: {fileID: 100016297}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: timeToShowLights
-      value: 15
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.data[0]
       value: 
-      objectReference: {fileID: 1775464745}
+      objectReference: {fileID: 1184904349}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.data[1]
       value: 
