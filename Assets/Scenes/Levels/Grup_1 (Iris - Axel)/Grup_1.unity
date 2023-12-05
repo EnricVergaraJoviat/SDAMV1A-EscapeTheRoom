@@ -5629,6 +5629,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 844026948098737184, guid: 9f04bfc8b1af5465cad27faf2d40a9ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01a754e0e8164ae49a918a2734cc2dfb, type: 2}
     - target: {fileID: 923546542211654526, guid: 9f04bfc8b1af5465cad27faf2d40a9ed, type: 3}
       propertyPath: m_Name
       value: Room
