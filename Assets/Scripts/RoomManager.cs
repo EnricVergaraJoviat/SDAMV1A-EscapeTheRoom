@@ -31,7 +31,8 @@ public class RoomManager : MonoBehaviour
     public TextMeshProUGUI labelTitle;
     public TextMeshProUGUI labelSubtitle;
     public TextMeshProUGUI labelLogo;
-    
+    public GameObject popUpObject;
+
     //---Setup custom room:
     [Header("________________________")]
     [Header("CONFIGURAR AIXÒ:")]
@@ -104,6 +105,7 @@ public class RoomManager : MonoBehaviour
             {
                 light.SetActive(true);
             }
+            popUpObject.GetComponent<ShowPopUp>().ShowUI();
         }
 
         int minutes = (int)timer / 60;
