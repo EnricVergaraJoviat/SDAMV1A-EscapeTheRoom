@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 15077555208e69a4eb2f55a60f3b4e99
-  - enabled: 0
-    path: Assets/Scenes/Levels/Group_1 (Student1-Student2)/Group_1.unity
-    guid: ccd2561af0fae4476b5dab817b1fb50d
+    path: Assets/Scenes/Main Menu/MainMenu.unity
+    guid: d47e1b86e655b4a6b9aead922c4709e8
   - enabled: 1
-    path: "Assets/Scenes/Levels/Grup_2 (Daniel Pe\u0301rez - Daniel Oller)/Grup 2(galeria).unity"
-    guid: 9d17bd3e472f782488ed91ebfb8fdca3
+    path: Assets/Scenes/Levels/Grup_1 (Iris - Axel)/_FINAL VERSION/Grup_1_ChristmasMode.unity
+    guid: 92287931329c14b738abd6858b52f23d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Grup_1 (Iris - Axel)/_FINAL VERSION/Grup_1_ClassicMode.unity
+    guid: 2a921ba13e6124891bb78562efd48fbd
   m_configObjects: {}

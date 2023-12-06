@@ -6,7 +6,7 @@ namespace HighlightPlus.Demos {
 	public class SphereHighlightEventExample : MonoBehaviour {
 
 		HighlightEffect effect;
-
+		public AudioSource audioSource;
 		void Start() {
 			effect = GetComponent<HighlightEffect> ();
 			effect.OnObjectHighlightStart += ValidateHighlightObject;
@@ -20,6 +20,10 @@ namespace HighlightPlus.Demos {
 
 		void HighlightStart () {
 			Debug.Log ("Gold sphere highlighted!");
+			if (audioSource != null)
+			{
+				audioSource.Play();
+			}
 		}
 
 		void HighlightEnd () {
@@ -27,12 +31,12 @@ namespace HighlightPlus.Demos {
 		}
 
 		void Update() {
-			if (InputProxy.GetKeyDown ("space")) {
+			/*if (InputProxy.GetKeyDown ("space")) {
 				effect.HitFX (Color.white, 0.2f);
 			}
 			if (InputProxy.GetKeyDown("c")) {
 				effect.SetGlowColor(new Color(Random.value, Random.value, Random.value));
-            }
+            }*/
 
 		}
 	}

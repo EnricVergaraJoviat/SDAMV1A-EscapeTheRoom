@@ -36,11 +36,11 @@ Material:
     - _DepthRange2: 0.761
     - _Dist: 0.04
     - _Float0: 20.58
-    - _Gloss: 0.934
+    - _Gloss: 0.231
     - _Lerp_: 0.998
-    - _LowPolyToFlat: 0.583
+    - _LowPolyToFlat: 0.562
     - _NoiseIntensity: 0.15
-    - _OpasityIntensity: 1
+    - _OpasityIntensity: 0.52
     - _Refraction: 0
     - _ScaleNoise: 0.1
     - _SizeFoam: 0.07

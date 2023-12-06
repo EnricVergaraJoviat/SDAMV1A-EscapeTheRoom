@@ -32,6 +32,7 @@ public class RoomManager : MonoBehaviour
     public TextMeshProUGUI labelSubtitle;
     public TextMeshProUGUI labelLogo;
     public GameObject popUpObject;
+    public GraphicRaycaster raycaster;
 
     //---Setup custom room:
     [Header("________________________")]
@@ -56,6 +57,7 @@ public class RoomManager : MonoBehaviour
     
     void Start()
     {
+        raycaster.enabled = false;
         labelAuthor1.text = author1;
         labelAuthor2.text = author2;
         labelTitle.text = title;
