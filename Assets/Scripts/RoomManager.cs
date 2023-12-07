@@ -121,7 +121,11 @@ public class RoomManager : MonoBehaviour
 
         timeText = string.Format("{0:00}:{1:00}", minutes, seconds);
         labelTotalTime.text = timeText;
-        
+
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.C))
+        {
+            labelSubtitle.text = ""+solutionCode;
+        }
         
     }
 
