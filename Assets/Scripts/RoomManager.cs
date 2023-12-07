@@ -40,7 +40,7 @@ public class RoomManager : MonoBehaviour
     public Transform cameraTransform;
     public GameObject door;
     public int solutionCode;
-    public string nextRoom;
+    public int nextRoom;
     public GameObject[] lights;
     public float timeToShowLights = 100;
     public string author1;

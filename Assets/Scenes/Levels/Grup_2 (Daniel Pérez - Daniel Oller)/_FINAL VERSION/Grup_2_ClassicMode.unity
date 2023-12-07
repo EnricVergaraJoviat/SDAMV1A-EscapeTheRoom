@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 2003e75feed4b468fbc4ce517313689c, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 747f011d89e384eeab2869684404ec98, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -7028,7 +7028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984826425982574077, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 117.119995
       objectReference: {fileID: 0}
     - target: {fileID: 1984826425982574077, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7092,7 +7092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313490239844748732, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 117.119995
       objectReference: {fileID: 0}
     - target: {fileID: 3313490239844748732, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7116,7 +7116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038990800868994304, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 117.119995
       objectReference: {fileID: 0}
     - target: {fileID: 4038990800868994304, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7162,6 +7162,10 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1560029034}
+    - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
+      propertyPath: nextRoom
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: raycaster
       value: 
