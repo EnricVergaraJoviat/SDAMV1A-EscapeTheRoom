@@ -5916,7 +5916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1184904350
 Transform:
   m_ObjectHideFlags: 0
@@ -6323,28 +6323,28 @@ PrefabInstance:
       objectReference: {fileID: 100016297}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: timeToShowLights
-      value: 60
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.data[0]
       value: 
-      objectReference: {fileID: 1184904349}
+      objectReference: {fileID: 1775464747}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.data[1]
       value: 
-      objectReference: {fileID: 2146343615}
+      objectReference: {fileID: 2146343617}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.data[2]
       value: 
-      objectReference: {fileID: 3180554}
+      objectReference: {fileID: 3180556}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: lights.Array.data[3]
       value: 
-      objectReference: {fileID: 1335938159}
+      objectReference: {fileID: 1335938161}
     - target: {fileID: 7400161263506152434, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6820,7 +6820,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.007974337, g: 0.52900666, b: 0.6037736, a: 1}
-  m_Intensity: 410.4
+  m_Intensity: 50
   m_Range: 7.5
   m_SpotAngle: 52
   m_InnerSpotAngle: 20

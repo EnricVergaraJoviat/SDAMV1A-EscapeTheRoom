@@ -5204,6 +5204,10 @@ PrefabInstance:
       value: Alex Vargas
       objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
+      propertyPath: nextRoom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: subtitle
       value: NeonWar
       objectReference: {fileID: 0}
