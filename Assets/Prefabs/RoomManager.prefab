@@ -996,7 +996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -703.2027, y: -476.00903}
+  m_AnchoredPosition: {x: -591.5, y: -447.5}
   m_SizeDelta: {x: 494.2728, y: 126.0382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2078549578523114411
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Look at the lights, they will help you get the code
+  m_text: "Look at the lights, \nthey will help you\n get the code"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84dd14695854bbc43a5faa24fcf93d0d, type: 2}
   m_sharedMaterial: {fileID: 21261991626553910, guid: 84dd14695854bbc43a5faa24fcf93d0d, type: 2}
@@ -1054,8 +1054,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1096,6 +1096,81 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &2590898561320996234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3385276214302921208}
+  - component: {fileID: 7650591402583730954}
+  - component: {fileID: 7024566531242843852}
+  m_Layer: 5
+  m_Name: Image Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3385276214302921208
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2590898561320996234}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4323437, y: 1.375, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3592633915000660204}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -773.3, y: -370.1}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7650591402583730954
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2590898561320996234}
+  m_CullTransparentMesh: 1
+--- !u!114 &7024566531242843852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2590898561320996234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7a05676fbf69c4084b5d05f19e29a889, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2750649935223531985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1764,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3592633915000660204}
-  - component: {fileID: 4618411335297036676}
   m_Layer: 5
   m_Name: ---- Lights Popup ---------
   m_TagString: Untagged
@@ -1697,37 +1771,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3592633915000660204
-Transform:
+--- !u!224 &3592633915000660204
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3820254007941764400}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0000533183, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 852385190098800511}
+  - {fileID: 3385276214302921208}
   - {fileID: 1203746092722509768}
   m_Father: {fileID: 7251413313105982367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4618411335297036676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3820254007941764400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761eec37395c98b40bd9185a9675944b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIContainer: {fileID: 3820254007941764400}
-  speed: 1
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 811.5, y: -120}
+  m_SizeDelta: {x: 98.62, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3884496324808875777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,14 +1809,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5946862910934837454
-Transform:
+--- !u!224 &5946862910934837454
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3884496324808875777}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1762,6 +1826,11 @@ Transform:
   - {fileID: 1984649833019184183}
   m_Father: {fileID: 7251413313105982367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 580}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3926845234395842316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,8 +1865,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -657.39703, y: -453.8573}
-  m_SizeDelta: {x: 380.8079, y: 87.3574}
+  m_AnchoredPosition: {x: -755.3, y: -453.8573}
+  m_SizeDelta: {x: 270, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3620001745966798020
 CanvasRenderer:
@@ -1827,7 +1896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9badee22ad3256e44856c9d74e7b0b5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 951352f31055aae46b6e9786313c632d, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2122,21 +2191,18 @@ MonoBehaviour:
   labelSubtitle: {fileID: 2132204544505575464}
   labelLogo: {fileID: 642773174328207880}
   popUpObject: {fileID: 3820254007941764400}
+  raycaster: {fileID: 7575538136887766666}
+  imgLight: {fileID: 7024566531242843852}
   cameraTransform: {fileID: 0}
   door: {fileID: 0}
-  solutionCode: 421
-  nextRoom: Group_1
-  lights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  timeToShowLights: 5
-  author1: Enric Vergara 1
-  author2: Enric Vergara 2
-  title: Level X
-  subtitle: Level Name
+  solutionCode: 111
+  nextRoom: 3
+  lights: []
+  timeToShowLights: 20
+  author1: Alejandro Pastor
+  author2: "Jan Clar\xE0"
+  title: Level 3
+  subtitle: 'Code: 111'
 --- !u!114 &9212807847054481536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2152,6 +2218,10 @@ MonoBehaviour:
   doorObject: {fileID: 0}
   UIContainer: {fileID: 3884496324808875777}
   speed: 1
+  raycaster: {fileID: 7575538136887766666}
+  effect: {fileID: 0}
+  audioSource: {fileID: 4503406902148554582}
+  clip: {fileID: 8300000, guid: 8676ba4efd5744121b096a82e4138ac6, type: 3}
 --- !u!82 &4503406902148554582
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4390,7 +4460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224134852526349034, guid: 42f5e24993d8841409df7488f17882d5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 117.119995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224134852526349034, guid: 42f5e24993d8841409df7488f17882d5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4590,7 +4660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2349380166443870743, guid: 42f5e24993d8841409df7488f17882d5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 117.119995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2349380166443870743, guid: 42f5e24993d8841409df7488f17882d5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4634,7 +4704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3849502062665157291, guid: 42f5e24993d8841409df7488f17882d5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 117.119995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3849502062665157291, guid: 42f5e24993d8841409df7488f17882d5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5317,6 +5387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PB - Radial (Bold)
       objectReference: {fileID: 0}
+    - target: {fileID: 114293106415522588, guid: 3e86700be571c71468308b117b38eed2, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114325739158039770, guid: 3e86700be571c71468308b117b38eed2, type: 3}
       propertyPath: speed
       value: 0
@@ -5324,6 +5398,10 @@ PrefabInstance:
     - target: {fileID: 114325739158039770, guid: 3e86700be571c71468308b117b38eed2, type: 3}
       propertyPath: currentPercent
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114540694009835064, guid: 3e86700be571c71468308b117b38eed2, type: 3}
+      propertyPath: m_text
+      value: 0%
       objectReference: {fileID: 0}
     - target: {fileID: 114540694009835064, guid: 3e86700be571c71468308b117b38eed2, type: 3}
       propertyPath: m_textAlignment
