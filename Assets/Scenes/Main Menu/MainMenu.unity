@@ -2418,13 +2418,13 @@ MonoBehaviour:
   yMinLimit: -60
   yMaxLimit: 60
   yLimitOffset: 0
-  limitX: 0
+  limitX: 1
   xMinLimit: -60
   xMaxLimit: 60
   xLimitOffset: 0
   clickToRotate: 1
-  leftClickToRotate: 1
-  rightClickToRotate: 0
+  leftClickToRotate: 0
+  rightClickToRotate: 1
   autoRotateOn: 0
   autoRotateReverse: 0
   autoRotateSpeed: 0.1
@@ -3400,8 +3400,8 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 8676ba4efd5744121b096a82e4138ac6, type: 3}
   doorObject_ClassicMode: {fileID: 1457461281}
   doorObject_ChristmascMode: {fileID: 351686326}
-  indexFirstRoomClassicMode: 2
-  indexFirstRoomChristmasMode: 1
+  indexFirstRoomClassicMode: 1
+  indexFirstRoomChristmasMode: 9
 --- !u!4 &1099404535
 Transform:
   m_ObjectHideFlags: 0
@@ -6026,7 +6026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa065c392cb56b4297fed46ecec00e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstRoom: 
 --- !u!4 &1896883455
 Transform:
   m_ObjectHideFlags: 0

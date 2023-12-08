@@ -9853,7 +9853,7 @@ MonoBehaviour:
   yMinLimit: -60
   yMaxLimit: 60
   yLimitOffset: 0
-  limitX: 0
+  limitX: 1
   xMinLimit: -60
   xMaxLimit: 60
   xLimitOffset: 0

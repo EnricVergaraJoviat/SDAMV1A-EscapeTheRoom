@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 86e2e92e965a54b669cc181218afbee9, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -258,13 +258,13 @@ MonoBehaviour:
   yMinLimit: -60
   yMaxLimit: 60
   yLimitOffset: 0
-  limitX: 0
+  limitX: 1
   xMinLimit: -60
   xMaxLimit: 60
   xLimitOffset: 0
   clickToRotate: 1
-  leftClickToRotate: 1
-  rightClickToRotate: 0
+  leftClickToRotate: 0
+  rightClickToRotate: 1
   autoRotateOn: 0
   autoRotateReverse: 0
   autoRotateSpeed: 0.1

@@ -588,13 +588,13 @@ MonoBehaviour:
   yMinLimit: -60
   yMaxLimit: 60
   yLimitOffset: 0
-  limitX: 0
+  limitX: 1
   xMinLimit: -60
   xMaxLimit: 60
   xLimitOffset: 0
   clickToRotate: 1
-  leftClickToRotate: 1
-  rightClickToRotate: 0
+  leftClickToRotate: 0
+  rightClickToRotate: 1
   autoRotateOn: 0
   autoRotateReverse: 0
   autoRotateSpeed: 0.1
