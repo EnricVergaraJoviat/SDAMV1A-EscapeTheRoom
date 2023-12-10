@@ -47,4 +47,21 @@ EditorBuildSettings:
     path: "Assets/Scenes/Levels/Grup_3 (Alejandro Pastor-Jan Clara\u0300)/_FINAL
       VERSION/Grup_3_ChristmasMode.unity"
     guid: 7eb73bfa271e7be4d9cc61c77dafe5a6
+  - enabled: 1
+    path: "Assets/Scenes/Levels/Grup_4 (A\u0300lex Cadevall - Juan Manuel)/_FINAL
+      VERSION/Grup_4_ChristmasMode.unity"
+    guid: d3a3c41c919e34964a5810726ea0e530
+  - enabled: 1
+    path: Assets/Scenes/Levels/Grup_5 (Biel - Eric)/_FINAL VERSION/Grup_5_ChristmasMode.unity
+    guid: 0ead6ebbf4a494f58acc672c921c9592
+  - enabled: 1
+    path: Assets/Scenes/Levels/Grup_6 (Marc Suets-Pol Franch)/_FINAL VERSION/Grup_6_ChristmasMode.unity
+    guid: 81a828d2a4d2a4fd5ab3c360545b818a
+  - enabled: 1
+    path: "Assets/Scenes/Levels/Grup_7 (Ibrahim Yilali - Milton Mun\u0303oz)/_FINAL
+      VERSION/Grup_7_ChristmasMode.unity"
+    guid: deeaa121391fb487881e9d2489a162c0
+  - enabled: 1
+    path: Assets/Scenes/Levels/Grup_8 (Hugo Mingorance - Alex Vargas)/_FINAL VERSION/Grup_8_ChristmasMode.unity
+    guid: c0b2ab38ec2b8416bb27f9c9f7d128a0
   m_configObjects: {}
