@@ -19,7 +19,6 @@ namespace HighlightPlus.Demos {
 		}
 
 		void HighlightStart () {
-			Debug.Log ("Gold sphere highlighted!");
 			if (audioSource != null)
 			{
 				audioSource.Play();
@@ -27,7 +26,7 @@ namespace HighlightPlus.Demos {
 		}
 
 		void HighlightEnd () {
-			Debug.Log ("Gold sphere not highlighted!");
+			//Debug.Log ("Gold sphere not highlighted!");
 		}
 
 		void Update() {

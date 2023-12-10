@@ -39,4 +39,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Grup_1 (Iris - Axel)/_FINAL VERSION/Grup_1_ChristmasMode.unity
     guid: 92287931329c14b738abd6858b52f23d
+  - enabled: 1
+    path: "Assets/Scenes/Levels/Grup_2 (Daniel Pe\u0301rez - Daniel Oller)/_FINAL
+      VERSION/Grup_2_ChristmasMode.unity"
+    guid: d70b97eedd85046b4ad2c0dca6f30df0
+  - enabled: 1
+    path: "Assets/Scenes/Levels/Grup_3 (Alejandro Pastor-Jan Clara\u0300)/_FINAL
+      VERSION/Grup_3_ChristmasMode.unity"
+    guid: 7eb73bfa271e7be4d9cc61c77dafe5a6
   m_configObjects: {}

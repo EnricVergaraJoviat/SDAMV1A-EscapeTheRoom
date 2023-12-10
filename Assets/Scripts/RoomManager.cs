@@ -233,7 +233,7 @@ public class RoomManager : MonoBehaviour
         {
             float currentPercent = Mathf.Lerp(startValue, endValue, elapsed / duration);
             pb.currentPercent = currentPercent;
-            Debug.Log(currentPercent);
+            
             elapsed += Time.deltaTime;
             yield return null;
         }
