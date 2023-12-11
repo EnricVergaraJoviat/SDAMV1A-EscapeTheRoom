@@ -32,23 +32,20 @@ public class RoomManager : MonoBehaviour
     public TextMeshProUGUI labelSubtitle;
     public TextMeshProUGUI labelLogo;
     public GameObject popUpObject;
-    public GraphicRaycaster raycaster;
-    public Image imgLight;
-    
+
     //---Setup custom room:
     [Header("________________________")]
     [Header("CONFIGURAR AIXÒ:")]
     public Transform cameraTransform;
     public GameObject door;
     public int solutionCode;
-    public int nextRoom;
-    public Light[] lights;
+    public string nextRoom;
+    public GameObject[] lights;
     public float timeToShowLights = 100;
     public string author1;
     public string author2;
     public string title;
     public string subtitle;
-    public float durationLightAnimation = 2.0f;
     
     //---Private variables:
     private int tries;
@@ -56,19 +53,9 @@ public class RoomManager : MonoBehaviour
     private float totalTime;
     private GameController gc = null;
     private bool roomSolved;
-    private bool isTimeToShowLights = false;
-    private float[] initialIntensities;
     
     void Start()
     {
-        initialIntensities = new float[lights.Length];
-        for (int i = 0; i < lights.Length; i++)
-        {
-            initialIntensities[i] = lights[i].intensity;
-        }
-        
-        popUpObject.SetActive(false);
-        raycaster.enabled = false;
         labelAuthor1.text = author1;
         labelAuthor2.text = author2;
         labelTitle.text = title;
@@ -98,7 +85,7 @@ public class RoomManager : MonoBehaviour
         timer = 0.0f;
         foreach (var light in lights)
         {
-            light.enabled = false;
+            light.SetActive(false);
         }
     }
     // Update is called once per frame
@@ -112,21 +99,13 @@ public class RoomManager : MonoBehaviour
         
         timer += Time.deltaTime;
         totalTime += Time.deltaTime;
-        if (timer > timeToShowLights && !isTimeToShowLights)
+        if (timer > timeToShowLights)
         {
-            isTimeToShowLights = true;
             foreach (var light in lights)
             {
-                light.enabled = true;
+                light.SetActive(true);
             }
-
-            if (lights.Length > 0)
-            {
-                popUpObject.SetActive(true);
-                
-            }
-            StartCoroutine(ChangeIntensity());
-            
+            popUpObject.GetComponent<ShowPopUp>().ShowUI();
         }
 
         int minutes = (int)timer / 60;
@@ -140,11 +119,7 @@ public class RoomManager : MonoBehaviour
 
         timeText = string.Format("{0:00}:{1:00}", minutes, seconds);
         labelTotalTime.text = timeText;
-
-        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.C))
-        {
-            labelSubtitle.text = ""+solutionCode;
-        }
+        
         
     }
 
@@ -157,7 +132,6 @@ public class RoomManager : MonoBehaviour
             {
                 o.SetActive(false);
             }
-            popUpObject.SetActive(false);
             Debug.Log("The CODE is Correct!");
             StartCoroutine(RotateDoor(100, 4.0f));
             StartCoroutine(AnimateProgressBar(0.0f, 25.0f, 4.0f));
@@ -233,7 +207,7 @@ public class RoomManager : MonoBehaviour
         {
             float currentPercent = Mathf.Lerp(startValue, endValue, elapsed / duration);
             pb.currentPercent = currentPercent;
-            
+            Debug.Log(currentPercent);
             elapsed += Time.deltaTime;
             yield return null;
         }
@@ -245,41 +219,4 @@ public class RoomManager : MonoBehaviour
     {
         audioSource.PlayOneShot(singleKeyType);
     }
-    
-    IEnumerator ChangeIntensity()
-    {
-        while (true)
-        {
-            // De 1 a 2
-            yield return LerpIntensity(0f, 1f, durationLightAnimation);
-            // De 2 a 1
-            yield return LerpIntensity(1f, 0f, durationLightAnimation);
-        }
-    }
-
-    IEnumerator LerpIntensity(float startIntensity, float endIntensity, float duration)
-    {
-        float time = 0;
-        while (time < duration)
-        {
-            float intensity = Mathf.Lerp(startIntensity, endIntensity, time / duration);
-            int index = 0;
-            foreach (var light in lights)
-            {
-                light.intensity = intensity*initialIntensities[index];
-                Color color = imgLight.color;
-                color.a = intensity;
-                imgLight.color = color;
-                index++;
-            }
-            time += Time.deltaTime;
-            yield return null;
-        }
-        // Asegurar que las luces lleguen a la intensidad final
-        foreach (var light in lights)
-        {
-            light.intensity = endIntensity;
-        }
-    }
-    
 }

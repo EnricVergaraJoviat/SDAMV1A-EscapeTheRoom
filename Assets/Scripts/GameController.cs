@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class GameController : MonoBehaviour
 {
     List<RoomInfo> rooms = new List<RoomInfo>();
+    public string firstRoom;
     private static GameController instance;
 
     void Awake()
@@ -20,6 +21,17 @@ public class GameController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+   
+    void Update()
+    {
+        
+    }
+
+    public void StartGame()
+    {
+        rooms.Clear();
+        SceneManager.LoadScene(firstRoom);
     }
     
     public void FinishRoom(float timeCurrentRoom, int tries)
