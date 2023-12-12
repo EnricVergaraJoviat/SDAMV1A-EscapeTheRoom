@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Grup_1 (Iris - Axel)/_FINAL VERSION/Grup_1_ClassicMode.unity
     guid: 2a921ba13e6124891bb78562efd48fbd
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Levels/Grup_2 (Daniel Pe\u0301rez - Daniel Oller)/_FINAL
       VERSION/Grup_2_ClassicMode.unity"
     guid: 3aa7f2ddb11d34511926bcf30c0e6bed
@@ -39,7 +39,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Grup_1 (Iris - Axel)/_FINAL VERSION/Grup_1_ChristmasMode.unity
     guid: 92287931329c14b738abd6858b52f23d
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Levels/Grup_2 (Daniel Pe\u0301rez - Daniel Oller)/_FINAL
       VERSION/Grup_2_ChristmasMode.unity"
     guid: d70b97eedd85046b4ad2c0dca6f30df0
