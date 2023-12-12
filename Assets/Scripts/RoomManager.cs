@@ -61,6 +61,7 @@ public class RoomManager : MonoBehaviour
     
     void Start()
     {
+        timeToShowLights = 30;
         initialIntensities = new float[lights.Length];
         for (int i = 0; i < lights.Length; i++)
         {
