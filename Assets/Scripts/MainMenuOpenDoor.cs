@@ -41,6 +41,7 @@ public class MainMenuOpenDoor : MonoBehaviour
             {
                 openedChristmas = true;
                 audioSource.PlayOneShot(audioClip);
+
             }
         }
     }
