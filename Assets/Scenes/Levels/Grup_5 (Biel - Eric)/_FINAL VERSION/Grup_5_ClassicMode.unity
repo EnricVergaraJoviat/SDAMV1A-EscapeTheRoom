@@ -3563,6 +3563,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5630908533109259557, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6961776290940442721, guid: 37ba378e2a3c94158a07346a720062ad, type: 3}
       propertyPath: door
       value: 
@@ -5344,6 +5348,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 14.972, y: 90.932, z: 3.603}
+--- !u!1 &1580946022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580946024}
+  - component: {fileID: 1580946023}
+  m_Layer: 0
+  m_Name: scoreBoardManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1580946023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580946022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290a40f7add9a344e899328d622b77d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreBoard: {fileID: 2119418989}
+--- !u!4 &1580946024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580946022}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.8757223, y: -0.31419373, z: 6.8013515}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1604306313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3850030969109603700, guid: a12f3094836d84e729ec7beb17320cee, type: 3}
@@ -6578,7 +6627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -966.0752, y: -537.7005}
+  m_AnchoredPosition: {x: -965.8358, y: -537.7005}
   m_SizeDelta: {x: 123.1343, y: 168.1693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119418989
@@ -6601,7 +6650,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '  02   06'
+  m_text: 02   06
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6934,6 +6983,7 @@ SceneRoots:
   - {fileID: 623699506}
   - {fileID: 155385416}
   - {fileID: 1812608921}
+  - {fileID: 1580946024}
   - {fileID: 1548029502}
   - {fileID: 1218544369}
   - {fileID: 1770747474}
