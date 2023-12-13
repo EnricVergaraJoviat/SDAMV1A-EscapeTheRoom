@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
+
 
 public class GameController : MonoBehaviour
 {
-    List<RoomInfo> rooms = new List<RoomInfo>();
+    private float totalTime;
+    private int totalTries;
+    [SerializeField] private List<RoomInfo> rooms = new List<RoomInfo>();
+    public List<RoomInfo> Rooms => rooms;
     private static GameController instance;
 
+    public bool ClassicMode;
     void Awake()
     {
         if (instance == null)
@@ -30,11 +34,24 @@ public class GameController : MonoBehaviour
 
     public float GetTotalTime()
     {
-        float totalTime = 0.0f;
+        totalTime = 0.0f;
         foreach (var roomInfo in rooms)
         {
             totalTime += roomInfo.time;
         }
         return totalTime;
+    }
+    public int GetTotalTries()
+    {
+        totalTries = 0;
+        foreach (var roomInfo in rooms)
+        {
+            totalTries += roomInfo.tries;
+        }
+        return totalTries;
+    }
+    public void SetClassicMode(bool value)
+    {
+        ClassicMode = value;
     }
 }

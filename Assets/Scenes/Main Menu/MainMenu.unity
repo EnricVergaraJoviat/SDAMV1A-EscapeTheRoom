@@ -3402,6 +3402,7 @@ MonoBehaviour:
   doorObject_ChristmascMode: {fileID: 351686326}
   indexFirstRoomClassicMode: 1
   indexFirstRoomChristmasMode: 8
+  NormalMode: 0
 --- !u!4 &1099404535
 Transform:
   m_ObjectHideFlags: 0
@@ -6026,6 +6027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa065c392cb56b4297fed46ecec00e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoorManager: {fileID: 1099404534}
+  ClassicMode: 0
 --- !u!4 &1896883455
 Transform:
   m_ObjectHideFlags: 0

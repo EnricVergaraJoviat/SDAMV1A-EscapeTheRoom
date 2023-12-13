@@ -11,9 +11,11 @@ public class MainMenuOpenDoor : MonoBehaviour
     // Start is called before the first frame update
     public int indexFirstRoomClassicMode;
     public int indexFirstRoomChristmasMode;
+    public bool NormalMode;
+    public GameController gameController;
     void Start()
     {
-        
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -29,12 +31,17 @@ public class MainMenuOpenDoor : MonoBehaviour
             {
                 audioSource.PlayOneShot(audioClip);
                 SceneManager.LoadScene(indexFirstRoomClassicMode);
-                
-            }else if (objectHit == doorObject_ChristmascMode && Input.GetMouseButtonDown(0))
+                NormalMode = true;
+                gameController.SetClassicMode(NormalMode);
+
+            }
+            else if (objectHit == doorObject_ChristmascMode && Input.GetMouseButtonDown(0))
             {
                 audioSource.PlayOneShot(audioClip);
                 SceneManager.LoadScene(indexFirstRoomChristmasMode);
-                
+                NormalMode = false;
+                gameController.SetClassicMode(NormalMode);
+
             }
         }
     }

@@ -54,6 +54,7 @@ public class RoomManager : MonoBehaviour
     private int tries;
     private float timer;
     private float totalTime;
+    private float totalTries;
     private GameController gc = null;
     private bool roomSolved;
     private bool isTimeToShowLights = false;
@@ -61,6 +62,7 @@ public class RoomManager : MonoBehaviour
     
     void Start()
     {
+        
         timeToShowLights = 30;
         initialIntensities = new float[lights.Length];
         for (int i = 0; i < lights.Length; i++)
@@ -85,6 +87,7 @@ public class RoomManager : MonoBehaviour
             if (gc != null)
             {
                 totalTime = gc.GetTotalTime();
+                totalTries = gc.GetTotalTries();
             }
             else
             {
@@ -101,6 +104,7 @@ public class RoomManager : MonoBehaviour
         {
             light.enabled = false;
         }
+
     }
     // Update is called once per frame
     void Update()
