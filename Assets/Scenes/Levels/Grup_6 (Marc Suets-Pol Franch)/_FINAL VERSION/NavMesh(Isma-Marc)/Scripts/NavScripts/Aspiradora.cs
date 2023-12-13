@@ -10,14 +10,14 @@ public class Aspiradora : MonoBehaviour
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        targetPosition = transform.position; // Inicializar con la posición actual
+        targetPosition = transform.position;
+        navMeshAgent.enabled = false; // Desactivar el NavMeshAgent al inicio
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // Utiliza Camera.main para referenciar automáticamente la cámara principal
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -25,27 +25,22 @@ public class Aspiradora : MonoBehaviour
             {
                 targetPosition = hit.point;
                 movingToTarget = true;
+
+                // Activar el NavMeshAgent cuando el jugador hace clic
+                navMeshAgent.enabled = true;
+                navMeshAgent.SetDestination(targetPosition);
             }
         }
 
-        if (movingToTarget)
+        if (movingToTarget && navMeshAgent.enabled)
         {
-            MoveTowardsTarget();
-        }
-    }
+            if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.1f)
+            {
+                movingToTarget = false;
 
-    void MoveTowardsTarget()
-    {
-        Vector3 direction = (targetPosition - transform.position).normalized;
-        float distance = Vector3.Distance(transform.position, targetPosition);
-
-        if (distance > 0.1f) // Umbral para detener el movimiento
-        {
-            navMeshAgent.Move(direction * Time.deltaTime);
-        }
-        else
-        {
-            movingToTarget = false;
+                // Desactivar el NavMeshAgent cuando el jugador ha alcanzado la posición deseada
+                navMeshAgent.enabled = false;
+            }
         }
     }
 }
